@@ -54,7 +54,7 @@ configure_kernel(){
     make defconfig
     message "enable debugging configs"
     sleep 1
-    
+
     ./scripts/config --enable CONFIG_DEBUG_INFO
     ./scripts/config --enable CONFIG_DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT
     ./scripts/config --disable CONFIG_DEBUG_INFO_NONE
@@ -64,9 +64,9 @@ configure_kernel(){
     ./scripts/config --enable CONFIG_GDB_SCRIPTS
     ./scripts/config --enable CONFIG_FRAME_POINTER
     ./scripts/config --set-val CONFIG_RANDOMIZE_BASE n
+    ./scripts/config --enable CONFIG_KGDB
+    ./scripts/config --enable CONFIG_KGDB_SERIAL_CONSOLE
     #./scripts/config --enable CONFIG_DEBUG_SLAB
-    #./scripts/config --enable CONFIG_KGDB
-    
 }
 
 build(){

@@ -18,7 +18,7 @@ install_dependencies(){
     sudo apt install -y build-essential libncurses-dev flex bison openssl \
                         libssl-dev dkms libelf-dev libudev-dev libpci-dev \
                         libiberty-dev autoconf bc dwarves bear gcc-arm*   \
-                        cpio xz-utils lz4
+                        cpio xz-utils lz4 ccache
     # Beaglebone dependencies
     sudo apt-get install gettext libmpc-dev u-boot-tools lz4
 }
